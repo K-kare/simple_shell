@@ -25,7 +25,7 @@ token = strtok(NULL, " ");
 buffer[arg_count] = NULL;
 execvp(buffer[0], buffer);
 zef_print("Error executing\n");
-exit(EXIT_FAILURE);
+exit(EXIT_SUCCESS);
 }
 else
 {

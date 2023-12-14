@@ -13,5 +13,6 @@ command_line();
 input_command(command, sizeof(command));
 effect_command(command);
 exit_func();
+return(0);
 }
 }
