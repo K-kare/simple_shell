@@ -1,12 +1,11 @@
 #include"shell.h"
 /**
 *exit_func - function to exit shell
-*
 */
-void exit_func()
+void exit_func(void)
 {
-int status;
-if ((status = 0))
+int status = EXIT_SUCCESS;
+if (status == 0)
 {
 exit(EXIT_SUCCESS);
 }

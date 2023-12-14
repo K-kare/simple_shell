@@ -16,8 +16,8 @@ else if (childpid == 0)
 {
 char *buffer[128];
 int arg_count = 0;
-char *token = strtok((char *)command," ");
-while(token != NULL)
+char *token = strtok((char *)command, " ");
+while (token != NULL)
 {
 buffer[arg_count++] = token;
 token = strtok(NULL, " ");
