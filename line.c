@@ -5,5 +5,5 @@
 */
 void command_line(void)
 {
-zef_print("KareBridget_shell$");
+zef_print("$");
 }
