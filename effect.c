@@ -14,7 +14,7 @@ exit(EXIT_FAILURE);
 }
 else if (childpid == 0)
 {
-char *command[] = {"-l", NULL};
+char *command[] = {"ls", "-l", NULL};
 char *envp[] = {"NULL"}; 
 if (execve("/usr/bin/ls", command, envp) == -1)
 {
