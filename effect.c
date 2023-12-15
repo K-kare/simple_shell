@@ -4,7 +4,7 @@
 *@command: pointer to string with command
 *Return: NULL
 */
-void effect_command(const char *command)
+void effect_command(void)
 {
 pid_t childpid = fork();
 if (childpid == -1)
@@ -14,12 +14,16 @@ exit(EXIT_FAILURE);
 }
 else if (childpid == 0)
 {
-execlp(command, command, (char *)NULL);
-zef_print("Error executing\n");
-exit(EXIT_SUCCESS);
+char *command[] = {"-l", NULL};
+char *envp[] = {"NULL"}; 
+if (execve("/usr/bin/ls", command, envp) == -1)
+{
+zef_print("EXECLP");
+exit(EXIT_FAILURE);
 }
 else
 {
 wait(NULL);
+}
 }
 }

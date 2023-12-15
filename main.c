@@ -11,7 +11,7 @@ for (i = 0; (i = 1); i++)
 {
 command_line();
 input_command(command, sizeof(command));
-effect_command(command);
+effect_command();
 exit_func();
 return(0);
 }
