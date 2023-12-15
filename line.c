@@ -5,5 +5,5 @@
 */
 void command_line(void)
 {
-zef_print("$");
+zef_print("kare/bridget$");
 }
