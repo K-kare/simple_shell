@@ -14,16 +14,7 @@ exit(EXIT_FAILURE);
 }
 else if (childpid == 0)
 {
-char *buffer[128];
-int arg_count = 0;
-char *token = strtok((char *)command, " ");
-while (token != NULL)
-{
-buffer[arg_count++] = token;
-token = strtok(NULL, " ");
-}
-buffer[arg_count] = NULL;
-execvp(buffer[0], buffer);
+execlp(command, command, (char *)NULL);
 zef_print("Error executing\n");
 exit(EXIT_SUCCESS);
 }
